@@ -1,0 +1,296 @@
+/* General Body Styling */
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('Background frfr.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    color: #4e3629;
+    line-height: 1.8;
+}
+
+/* Header and Navigation Styling */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 0; /* Reduced padding for smaller nav */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between; /* Align logo and navigation */
+    align-items: center; /* Vertically center content */
+    height: 50px; /* Reduced height of the header */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .logo-container {
+    padding-left: 10px; /* Reduced padding on left side of logo */
+}
+
+header .logo {
+    width: 50px; /* Reduced size of logo */
+    height: auto;
+}
+
+/* Navigation styling */
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin-right: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px; /* Reduced margin between items */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Reduced font size */
+    padding: 5px 10px; /* Reduced padding around each link */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Navigation Links */
+header nav ul li a:hover {
+    background-color: #ff6347;
+    border-radius: 5px;
+}
+
+/* Main Content Styling */
+.main-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 50px 30px;
+    margin: 100px auto 20px;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Fire Ferret Info Section Styling */
+.fire-ferret-info {
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.fire-ferret-info h3 {
+    font-size: 2rem;
+    color: #8e6b3f;
+    margin-bottom: 15px;
+}
+
+/* Container to hold images */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Styling for each image */
+.image {
+    width: 45%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.fire-ferret-info p {
+    font-size: 1.1rem;
+    color: #4e3629;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Showcase Section */
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(236, 75, 26, 0.8); /* White background with 80% opacity */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.showcase-header {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Flex container for the showcase items */
+.showcase-items {
+    display: flex; /* Arrange items in a row */
+    justify-content: space-between; /* Space out the items evenly */
+    gap: 20px; /* Space between items */
+    width: 100%;
+    max-width: 1200px; /* Optional: Limit the max width for large screens */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+/* Showcase Item Styles */
+.showcase-item {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%; /* Each item takes up 30% of the container width */
+    max-width: 350px; /* Prevent items from becoming too wide */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.showcase-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.showcase-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+iframe {
+    width: 80%;
+    height: 400px; /* Increased height for better visibility */
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+figcaption {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .showcase-items {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center the items */
+    }
+
+    .showcase-item {
+        width: 80%; /* Adjust width for smaller screens */
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+}
+
+/* Slideshow Section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    margin: 40px auto; /* Adjust margin to add space between the slideshow and other sections */
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img,
+.slides object {
+    width: 100%;
+    height: auto;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}

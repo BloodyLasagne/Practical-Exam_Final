@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Ferrets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Logo added here -->
+            <div class="logo-container">
+                <img src="Logo.jpg" alt="Fire Ferrets Logo" class="logo">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fire-ferret-info">Fire Ferret Info</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content" id="home">
+        <h1>Welcome to the World of Fire Ferrets!</h1>
+        <p>Learn about the amazing fire ferrets and their unique characteristics.</p>
+        <img src="Fire Ferret.jpg" alt="Map" />
+    </div>
+
+    <!-- Fire Ferret Information Section -->
+    <div class="fire-ferret-info" id="fire-ferret-info">
+        <h3>Location</h3>
+        <p>
+            The fire ferret is an arboreal mammal indigenous to the bamboo forests of the central Earth Kingdom. 
+            These creatures are typically found in lush, temperate forests and mountains, often in regions where the climate is warm and humid. 
+            Fire ferrets thrive in areas with dense vegetation, where they can easily find shelter and food. 
+            Their habitats are usually rich in natural resources, providing plenty of opportunities for exploration and play. 
+            While they are most commonly associated with certain fictional settings, in these environments, fire ferrets are known to roam freely, interacting with both their surroundings and the communities nearby. 
+            They often make their homes in burrows or under the protection of large trees, offering them a sense of safety and comfort.
+        </p>
+        <img src="Avatar map.jpg" alt="Map" />
+
+        <h3>Connection</h3>
+        <p>
+            The fire ferret is a derivation of a red panda, sometimes referred to as "fire fox", in size, fur patterns, and coloration in the face, body, and most distinctly the tail. 
+            It has most of the features of the red panda combined with the elongated body of a black-footed ferret.
+        </p>
+        <div class="image-container">
+            <!-- First image: Fire Ferret -->
+            <img src="Fire Ferret 2.jpg" alt="Fire Ferret" class="image" />
+        
+            <!-- Second image: Red Panda -->
+            <img src="Red panda.png" alt="Red Panda" class="image" />
+        </div>
+    </div>
+
+<!-- Showcase Section -->  
+<div class="showcase-container" id="showcase">
+    <h2 class="showcase-header">Showcase of Activities</h2>
+    
+    <!-- Showcase Items Container -->
+    <div class="showcase-items">
+        <!-- Showcase 1: Image -->
+        <div class="showcase-item">
+            <h3 class="showcase-title">Work 1 - Image</h3>
+            <figure>
+                <img src="PPT Activity 3.jpg" alt="Work 1 - PowerPoint Activity">
+                <figcaption>
+                    In the second quarter, we assessed our skills in Microsoft PowerPoint. 
+                    This activity allowed us to showcase our ability to create, format, and present information effectively using PowerPoint’s various features, 
+                    such as slide design, transitions, animations, and multimedia integration.
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- Showcase 2: PDF Document (Concept Paper) -->
+        <div class="showcase-item">
+            <h3 class="showcase-title">Work 2 - PDF</h3>
+            <iframe src="Consept Paper_Malidom - Google Docs.pdf" title="Work 2 Concept Paper"></iframe>
+            <p>
+                In the first quarter, we created a concept paper on family preparedness for earthquake emergencies, 
+                showcasing our skills in Google Docs.
+            </p>
+        </div>
+
+        <!-- Showcase 3: PDF Document (Lesson 1) -->
+        <div class="showcase-item">
+            <h3 class="showcase-title">Work 3 - PDF</h3>
+            <iframe src="Lesson 1_Malidom & Cariño_Activity 1 - Google Docs.pdf" title="Work 3 Lesson 1"></iframe>
+            <p>
+                We identified five ICT-related careers: programmer, web developer, IT consultant, system administrator, 
+                and computer service technician. We researched their job descriptions, required skills, educational backgrounds, and career paths.
+            </p>
+        </div>
+    </div>
+
+    <!-- Microsoft Digital Literacy Section -->
+    <div class="slideshow-container">
+        <div class="slides">
+            <!-- Add images -->
+            <div class="slide"><img src="Working_with_computers_Malidom.jpg" alt="Working with Computers"></div>
+            <div class="slide"><img src="Participate safely and responsibly online_Malidom.jpg" alt="Participate Safely and Responsibly Online"></div>
+            <div class="slide"><img src="Create digital content_Malidom.jpg" alt="Create Digital Content"></div>
+            <div class="slide"><img src="Communicate online_Malidom.jpg" alt="Communicate Online"></div>
+            <div class="slide"><img src="Collaborate and manage content digitally_Malidom.jpg" alt="Collaborate and Manage Content Digitally"></div>
+            <div class="slide"><img src="Access information online_Malidom.jpg" alt="Access Information Online"></div>
+            <!-- Add PDF -->
+            <div class="slide"><object data="Microsoft_Digital_Literacy_Malidom.jpg" alt="Microsoft Digital Literacy"></object></div>
+        </div>
+        
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</div>
+
+
+<script>
+    let slideIndex = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        if (index >= slides.length) slideIndex = 0;
+        if (index < 0) slideIndex = slides.length - 1;
+        const slideWidth = slides[0].clientWidth;
+        document.querySelector('.slides').style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+    }
+
+    function moveSlide(step) {
+        slideIndex += step;
+        showSlide(slideIndex);
+    }
+
+    window.onload = () => showSlide(slideIndex);
+</script>
+
+    <footer>
+        <p>Alexxis Maridine W. Malidom<br>10 Daleth<br>2024</p>
+    </footer>
+</body>
+</html>
